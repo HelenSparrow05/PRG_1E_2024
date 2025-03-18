@@ -1,0 +1,48 @@
+<script>
+    // 1. Cyklus for - výpis čísel 0 až 4
+console.log("Čísla od 0 do 4:");
+for (var i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// 2. Sudá čísla od 1 do 100
+console.log("Sudá čísla od 1 do 100:");
+for (var x = 2; x <= 100; x += 2) {
+    console.log(x);
+}
+
+// 3. Faktoriál čísla N
+var N = 5; // Můžeš změnit podle potřeby
+var factorial = 1;
+for (var n = 1; n <= N; n++) {
+    factorial *= n;
+}
+console.log("Faktoriál čísla", N, "je", factorial);
+
+// 4. Trojúhelníkový vzor z hvězdiček
+var rows = 5; // Můžeš změnit podle potřeby
+console.log("Trojúhelníkový vzor:");
+for (var r = 1; r <= rows; r++) {
+    var stars = "";
+    for (var s = 1; s <= r; s++) {
+        stars += "*";
+    }
+    console.log(stars);
+}
+
+// 5. Násobilka čísla X
+var X = 7; // Můžeš změnit podle potřeby
+console.log("Násobilka čísla", X, ":");
+for (var m = 1; m <= 10; m++) {
+    console.log(m + " × " + X + " = " + (m * X));
+}
+
+// 6. Součet čísel od 1 do N
+var sumN = 10; // Můžeš změnit podle potřeby
+var sum = 0;
+for (var t = 1; t <= sumN; t++) {
+    sum += t;
+}
+console.log("Součet čísel od 1 do", sumN, "je", sum);
+
+</script>

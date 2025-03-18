@@ -1,0 +1,34 @@
+<script>
+    //dovolená
+    console.log("Japonsko")
+    console.log("Řecko")
+    console.log("Itálie")
+    var dovolena = prompt("Zadejte kam byste chtěli na dovolenou")
+    if (dovolena == "Japonsko") {
+        console.log("V Japonsku se vám určitě bude líbit")
+    } else if (dovolena =="Řecko") {
+        console.log("Řecko je skvělá volba")
+    } else if (dovolena == "Itálie") {
+        console.log("Užijete si pizzu v Itálii")
+    }
+    //zvířata
+    var zvire1 = prompt("Zadejte svoje nejoblíbenější zvíře")
+    var zvire2 = prompt("Zadejte svoje 2. nejoblíbenější zvíře")
+    var zvire3 = prompt("Zadejte svoje 3. nejoblíbenější zvíře")
+    if (zvire1=="plameňák"||zvire2=="plameňák"||zvire3=="plameňák") {
+        alert("Plameňák je super")
+    }else if(zvire1=="tapír"||zvire2=="tapír"||zvire3=="tapír") {
+        alert("Také mám rád tapíry")
+    }else{
+        alert("Žádné cool zvíře")
+    }
+    //hodiny
+    var hodiny = prompt("Kolik je hodin?")
+    if (1<=hodiny&&hodiny<=12) {
+        alert("Je ráno")
+    }else if (13<=hodiny&&hodiny<=20) {
+        alert("Je odpoledne")
+    }else if (21<=hodiny&&hodiny<=0) {
+        alert("Je večer")
+    }
+</script>

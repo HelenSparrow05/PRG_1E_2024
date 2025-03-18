@@ -1,0 +1,40 @@
+<script>
+    function caesarCipher(text, shift) {
+    var abecedaMale = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var abecedaVelke = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+    var result = "";
+
+    for (var i = 0; i < text.length; i++) {
+        var char = text[i];
+
+        // Malá písmena
+        var indexMale = abecedaMale.indexOf(char);
+        if (indexMale !== -1) {
+            var newIndex = (indexMale + shift + 26) % 26; // Zajištění správného cyklování
+            result += abecedaMale[newIndex];
+            continue;
+        }
+
+        // Velká písmena
+        var indexVelke = abecedaVelke.indexOf(char);
+        if (indexVelke !== -1) {
+            var newIndex = (indexVelke + shift + 26) % 26;
+            result += abecedaVelke[newIndex];
+            continue;
+        }
+
+        // Ostatní znaky zůstávají stejné
+        result += char;
+    }
+
+    return result;
+}
+
+// Příklad použití:
+console.log(caesarCipher("Ahoj světe!", 3));  // Výstup: "Dkrm vžhžh!"
+console.log(caesarCipher("Pes", 3));          // Výstup: "Shv"
+console.log(caesarCipher("XYZ", 3));          // Výstup: "ABC"
+console.log(caesarCipher("abc", -3));         // Výstup: "xyz"
+
+</script>

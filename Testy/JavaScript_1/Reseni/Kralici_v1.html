@@ -1,0 +1,35 @@
+<script>
+
+var opakovat = "ano";
+
+while (opakovat == "ano") {
+    // 1. Zeptání se na vstupní hodnoty
+    var pocatecniKralici = Number(prompt("Zadejte počáteční počet králíků (kladné číslo):"));
+    var mladataNaPar = Number(prompt("Zadejte průměrný počet mláďat na pár králíků za rok (kladné číslo):"));
+    var pocetLet = Number(prompt("Zadejte počet let sledování (kladné číslo):"));
+
+    var populace = pocatecniKralici;
+    console.log("Počáteční počet králíků: " + populace);
+
+    // 2. Výpočet populace pro každý rok
+    for (var rok = 1; rok <= pocetLet; rok++) {
+        var dospeliKralici = Math.floor(populace / 2); // Počítáme jen páry
+        var novaGenerace = dospeliKralici * mladataNaPar; // Každý pár má X mláďat
+        populace += novaGenerace; // Přidáme novou generaci ke stávající populaci
+
+        console.log("Po " + rok + ". roce: " + populace + " králíků");
+
+        // 3. Varování při přemnožení
+        if (populace > 1000) {
+            console.log("Pozor! Přemnožení králíků!");
+        }
+    }
+
+    // 4. Zeptání se, zda chce uživatel pokračovat
+    opakovat = prompt("Chcete program spustit znovu? (ano/ne)").toLowerCase();
+}
+
+console.log("Děkujeme za použití simulace!");
+
+
+</script>

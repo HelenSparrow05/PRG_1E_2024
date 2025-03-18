@@ -1,0 +1,34 @@
+<script>
+    var opakovat = "ano";
+
+while (opakovat == "ano") {
+    // 1. Zeptání se na vstupní hodnoty
+    var pocatecniVklad = Number(prompt("Zadejte počáteční vklad (kladné číslo):"));
+    var urokovaSazba = Number(prompt("Zadejte roční úrokovou sazbu (%):"));
+    var pocetLet = Number(prompt("Zadejte počet let spoření (kladné číslo):"));
+
+    var zustatek = pocatecniVklad;
+    console.log("Počáteční vklad: " + zustatek.toFixed(2) + " Kč");
+
+    // 2. Výpočet úspor pro každý rok
+    for (var rok = 1; rok <= pocetLet; rok++) {
+        zustatek += zustatek * (urokovaSazba / 100);
+        console.log("Po " + rok + ". roce: " + zustatek.toFixed(2) + " Kč");
+    }
+
+    // 3. Bonus při spoření 10 a více let
+    if (pocetLet >= 10) {
+        console.log("Protože spoříte " + pocetLet + " let, máte nárok na 500 Kč bonus.");
+        zustatek += 500;
+    }
+
+    // 4. Zobrazení konečného stavu účtu
+    console.log("Na konci spoření budete mít " + zustatek.toFixed(2) + " Kč.");
+
+    // 5. Zeptání se, zda chce uživatel pokračovat
+    opakovat = prompt("Chcete program spustit znovu? (ano/ne)").toLowerCase();
+}
+
+console.log("Děkujeme za použití spořící kalkulačky!");
+
+</script>

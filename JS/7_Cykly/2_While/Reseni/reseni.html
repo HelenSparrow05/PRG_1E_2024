@@ -1,0 +1,33 @@
+<script>
+
+alert("Vítej ve hře! Hádej náhodné číslo od 1 do 4.");
+
+// Hlavní herní smyčka
+var continueGame = true;
+
+while (continueGame) {
+    // Vygenerování nového náhodného čísla od 1 do 4
+    var randomNumber = Math.floor(Math.random() * 4) + 1;
+    var userGuess = 0;
+
+    // Smyčka pro získání správného tipu
+    while (userGuess !== randomNumber) {
+        userGuess = Number(prompt("Jaké číslo bylo vygenerováno? (1-4): "));
+
+        if (userGuess === randomNumber) {
+            alert("Gratuluji! Uhodl jsi správné číslo: " + randomNumber);
+        } else {
+            alert("Špatně! Zkus to znovu.");
+        }
+    }
+
+    // Zeptání se uživatele, zda chce pokračovat
+    var playAgain = prompt("Chceš hrát znovu? (ano/ne)").toLowerCase();
+    if (playAgain !== "ano") {
+        continueGame = false;
+        alert("Díky za hru! Měj se hezky.");
+    }
+}
+
+
+</script>

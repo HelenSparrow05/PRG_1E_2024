@@ -1,0 +1,63 @@
+<script>
+
+// Rozdělení stringů na pole pomocí split()
+var seznam = "jablko,hruška,banán,chleba,cukr,mouka,šunka,sýr,triko,rukavice,čepice,mléko,vejce,maso,brambory,rajče,okurka,paprika,cibule,česnek,olej,rýže,těstoviny,káva,čokoláda,džus,voda,limonáda,sůl,pepř,med,džem,salám,rohlík,bageta,mléčná čokoláda,hořká čokoláda,kečup,hořčice,majonéza,smetana,toastový chléb,koláč,sušenky,zmrzlina,pivo,víno,whisky,rum,gin,vodka";
+var cenyString = "20,25,15,40,30,35,50,60,300,150,200,25,50,120,20,35,30,45,10,15,90,80,60,120,50,30,25,15,20,100,80,5,25,40,60,65,40,35,45,25,50,30,60,70,35,120,500,400,600,550,440";
+
+var polozky = seznam.split(",");
+var ceny = cenyString.split(","); // Ceny zůstávají jako stringy
+
+// Funkce pro výpis seznamu s cenami
+function vypisSeznam() {
+    console.log("Seznam položek:");
+    for (var i = 0; i < polozky.length; i++) {
+        console.log(polozky[i] + " - " + ceny[i] + " Kč");
+    }
+}
+
+// Funkce pro přidání nové položky do seznamu (s parametry)
+function pridat(novaPolozka, novaCena) {
+    if (novaPolozka && novaCena) {
+        polozky.push(novaPolozka);
+        ceny.push(novaCena);
+        console.log(novaPolozka + " byla přidána do seznamu s cenou " + novaCena + " Kč.");
+    } else {
+        console.log("Neplatný vstup, položka nebyla přidána.");
+    }
+}
+
+// Funkce pro odebrání položky ze seznamu (s parametrem)
+function odebrat(nazev) {
+    var index = polozky.indexOf(nazev);
+
+    if (index !== -1) {
+        polozky.splice(index, 1);
+        ceny.splice(index, 1);
+        console.log(nazev + " byla odstraněna ze seznamu.");
+    } else {
+        console.log("Položka nebyla nalezena.");
+    }
+}
+
+// Hlavní smyčka programu
+while (true) {
+    vypisSeznam();
+    var akce = prompt("Chceš něco přidat (p), odebrat (o) nebo ukončit (k)?").toLowerCase();
+
+    if (akce === "p") {
+        var novaPolozka = prompt("Zadej novou položku:");
+        var novaCena = prompt("Zadej cenu nové položky:");
+        pridat(novaPolozka, novaCena);
+    } else if (akce === "o") {
+        var nazev = prompt("Zadej název položky k odebrání:");
+        odebrat(nazev);
+    } else if (akce === "k") {
+        console.log("Děkujeme za použití obchodu!");
+        break;
+    } else {
+        console.log("Neplatná volba, zkus to znovu.");
+    }
+}
+
+
+</script>

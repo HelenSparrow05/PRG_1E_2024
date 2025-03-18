@@ -1,0 +1,92 @@
+<script>
+    /*  Pravidla hry:
+        Hráč prochází levely(dungeons) s určitým počtem nepřátel a jeho úkolem je přežít co nejvíce kol.
+        Hráč má nějaké zdraví(hp) a útok(damage), stejně tak i jeho nepřítel.
+        Nepřítel má vždy stejné hp 150 a proměnlivou sílu útoku v rozsahu 1-20.
+        Pokud hráč projde celý level a porazí všechny nepřátele, dostane odměnu a hra se zeptá, zda chce zkusit další level.
+    */
+
+    // Funkce generující náhodnou hodnotu útoku nepřítele (1-20)
+    function enemy() {
+        return Math.floor(Math.random() * 20) + 1;
+    }
+
+    // Funkce generující náhodný počet nepřátel v levelu (1-5)
+    function dungeon() {
+        return Math.floor(Math.random() * 5) + 1;
+    }
+
+    // Funkce generující náhodnou odměnu
+    function reward() {
+        var rewards = ["100hp", "150hp", "5dmg", "10dmg", "nothing"];
+        var chosenReward = rewards[Math.floor(Math.random() * rewards.length)];
+
+        // Zpracování odměny
+        if (chosenReward === "100hp") {
+            hp += 100;
+        } else if (chosenReward === "150hp") {
+            hp += 150;
+        } else if (chosenReward === "5dmg") {
+            damage += 5;
+        } else if (chosenReward === "10dmg") {
+            damage += 10;
+        }
+
+        return chosenReward;
+    }
+
+    // Funkce vypisující aktuální stav hráče
+    function stats(hp, damage) {
+        alert("Your HP is " + hp + " and your damage is " + damage);
+    }
+
+    // Počáteční status postavy
+    var hp = 1000;
+    var damage = 50;
+    // Počáteční zdraví každého nepřítele
+    var enemyHp = 150;
+    // Zda chcete opakovat hru a vygenerovat nový dungeon
+    var again = "yes";
+    // Počítadlo odehraných kol
+    var rounds = 0;
+
+    // Hlavní smyčka hry - pokud uživatel zadá "yes", opakuje se hra
+    while (again === "yes") {
+        rounds++; // Připočtení kol
+
+        var repeat = dungeon();
+        alert("Dungeon has " + repeat + " enemies"); // Výpis počtu nepřátel v levelu
+
+        // Smyčka pro souboje s nepřáteli v levelu
+        for (var i = 0; i < repeat; i++) {
+            var newEnemyDamage = enemy();
+
+            // Soubojová logika - boj pokračuje, dokud má nepřítel HP
+            while (enemyHp > 0) {
+                enemyHp -= damage; // Hráč útočí na nepřítele
+                if (enemyHp > 0) {
+                    hp -= newEnemyDamage; // Nepřítel útočí zpět
+                }
+
+                // Pokud hráč zemře, ukončí se hra
+                if (hp <= 0) {
+                    alert("Defeated, you survived " + rounds + " rounds");
+                    again = "no";
+                    break;
+                }
+            }
+
+            stats(hp, damage); // Vypsání stavu hráče
+            enemyHp = 150; // Reset HP nepřítele pro další souboj
+        }
+
+        // Pokud hráč přežil všechny nepřátele v dungeonu, dostane odměnu
+        if (hp > 0) {
+            alert("You won! Your reward is: " + reward());
+            again = prompt("Do you want to try another dungeon? yes/no").toLowerCase();
+        }
+    }
+
+    alert("Game Over! Thanks for playing.");
+
+</script>

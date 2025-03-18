@@ -1,0 +1,37 @@
+<script>
+
+// Rozpoznání dne v týdnu
+var den = Number(prompt("Zadej číslo dne v týdnu (1-7):"));
+switch (den) {
+    case 1: alert("Pondělí"); break;
+    case 2: alert("Úterý"); break;
+    case 3: alert("Středa"); break;
+    case 4: alert("Čtvrtek"); break;
+    case 5: alert("Pátek"); break;
+    case 6: alert("Sobota"); break;
+    case 7: alert("Neděle"); break;
+    default: alert("Neplatné číslo, zadej 1-7.");
+}
+
+// Vstupné na hrad
+var kategorie = prompt("Zadej typ návštěvníka (senior, dítě, student, dospělý):");
+switch (kategorie) {
+    case "senior": alert("Cena lístku: 80 Kč"); break;
+    case "dítě": alert("Cena lístku: 40 Kč"); break;
+    case "student": alert("Cena lístku: 120 Kč"); break;
+    case "dospělý": alert("Cena lístku: 150 Kč"); break;
+    default: alert("Neplatná kategorie.");
+}
+
+// Automat na nápoje
+var napoj = prompt("Zadej název nápoje (čaj, cola, káva, voda):");
+switch (napoj) {
+    case "čaj": 
+    case "cola": 
+    case "káva": 
+    case "voda": alert("Vybral jsi " + napoj + "."); break;
+    default: alert("Omlouváme se, tento nápoj nemáme.");
+}
+
+
+</script>

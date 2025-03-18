@@ -1,0 +1,15 @@
+<script>
+//Příklad z testu (opakujte celý program dokud uživatel bude zadávat ano)
+var odpoved = prompt("Chcete program opakovat?") //tato řádka je potřeba aby cyklus proběhl alespoň jednou
+while(odpoved=="ano"){
+    odpoved = prompt("Chcete program opakovat?")
+}
+
+
+//hlavní rozdíl je, že zde nemusí být úvodní řádka aby cyklus proběhnul
+//do while proběhne vždy alespoň jednou 
+do{
+    odpoved = prompt("Chcete program opakovat?")
+}while(odpoved=="ano")
+
+</script>

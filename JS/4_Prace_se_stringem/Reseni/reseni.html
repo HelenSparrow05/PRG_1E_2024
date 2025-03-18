@@ -1,0 +1,48 @@
+<script>
+
+// Ověření rodného čísla
+var rc = prompt("Zadej rodné číslo:");
+if (rc.length === 10 && Number(rc) % 11 === 0) {
+    alert("Rodné číslo je platné.");
+} else {
+    alert("Rodné číslo není platné.");
+}
+
+// Porovnání dvou dat pomocí substring()
+var datum1 = prompt("Zadej první datum (DD.MM.RRRR):");
+var datum2 = prompt("Zadej druhé datum (DD.MM.RRRR):");
+
+// Extrakce částí data pomocí substring()
+var den1 = Number(datum1.substring(0, 2));
+var mesic1 = Number(datum1.substring(3, 5));
+var rok1 = Number(datum1.substring(6, 10));
+
+var den2 = Number(datum2.substring(0, 2));
+var mesic2 = Number(datum2.substring(3, 5));
+var rok2 = Number(datum2.substring(6, 10));
+
+// Porovnání roků
+if (rok1 > rok2) {
+    alert("Větší datum je: " + datum1);
+} else if (rok1 < rok2) {
+    alert("Větší datum je: " + datum2);
+} 
+// Pokud jsou roky stejné, porovnáváme měsíce
+else if (mesic1 > mesic2) {
+    alert("Větší datum je: " + datum1);
+} else if (mesic1 < mesic2) {
+    alert("Větší datum je: " + datum2);
+} 
+// Pokud jsou i měsíce stejné, porovnáváme dny
+else if (den1 > den2) {
+    alert("Větší datum je: " + datum1);
+} else if (den1 < den2) {
+    alert("Větší datum je: " + datum2);
+} 
+// Pokud je vše stejné
+else {
+    alert("Obě data jsou stejná.");
+}
+
+
+</script>

@@ -1,0 +1,68 @@
+<script>
+
+    // Seznam slov, ze kterých se náhodně vybere jedno pro hru
+var slova = ["pes", "auto", "strom", "kolo", "program"];
+var nahodneSlovo = slova[Math.floor(Math.random() * slova.length)]; // Náhodný výběr slova
+
+var skryteSlovo = []; // Pole pro skryté slovo
+for (var i = 0; i < nahodneSlovo.length; i++) {
+    skryteSlovo[i] = "_"; // Každé písmeno nahrazujeme podtržítkem
+}
+
+var pokusy = 5; // Počet pokusů
+
+alert("Vítej ve hře Šibenice! Musíš uhodnout slovo.");
+
+// Hlavní smyčka hry
+var slovoDokonceno = false;
+while (pokusy > 0 && !slovoDokonceno) {
+    // Sestavení řetězce skrytého slova bez použití join()
+    var vypisSlova = "";
+    for (var i = 0; i < skryteSlovo.length; i++) {
+        vypisSlova += skryteSlovo[i] + " ";
+    }
+    alert("Slovo: " + vypisSlova);
+
+    var tip = prompt("Zadej jedno písmeno:").toLowerCase();
+
+    // Kontrola, zda uživatel zadal pouze jedno písmeno (bez použití match)
+    if (tip.length !== 1 || (tip < "a" || tip > "z") && (tip < "á" || tip > "ž")) {
+        alert("Musíš zadat jedno písmeno!");
+        continue;
+    }
+
+    // Kontrola, zda písmeno je ve slově (bez includes)
+    var spravne = false;
+    for (var i = 0; i < nahodneSlovo.length; i++) {
+        if (nahodneSlovo[i] === tip) {
+            skryteSlovo[i] = tip;
+            spravne = true;
+        }
+    }
+
+    if (spravne) {
+        alert("Správně!");
+    } else {
+        pokusy--;
+        alert("Špatně! Zbývá ti " + pokusy + " pokusů.");
+    }
+
+    // Kontrola, zda je slovo kompletní (bez includes)
+    slovoDokonceno = true;
+    for (var i = 0; i < skryteSlovo.length; i++) {
+        if (skryteSlovo[i] === "_") {
+            slovoDokonceno = false;
+            break;
+        }
+    }
+}
+
+// Výsledek hry
+if (slovoDokonceno) {
+    alert("Gratuluji! Vyhrál jsi! Slovo bylo: " + nahodneSlovo);
+} else {
+    alert("Prohrál jsi! Slovo bylo: " + nahodneSlovo);
+}
+
+
+</script>
