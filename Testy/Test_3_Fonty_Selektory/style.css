@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+body {
+    background-color: cornsilk;
+}
+
+#blue, #orange {
+    font-weight: 100;
+}
+
+#blue {
+    color: blue;
+}
+
+#orange {
+    color: orange;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#red {
+    background-color: red;
+    font-style: italic;
+}
+
+.font {
+    font-family: "Edu AU VIC WA NT Pre";
+}
+
+ul {
+    font-family: monospace;
+}
+
+.size {
+    font-size: 20px;
+}
