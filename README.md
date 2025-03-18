@@ -421,16 +421,8 @@ V CSS se každý prvek na stránce chová jako obdélník a skládá se z těcht
 
 ### **Schéma Box Modelu:**
 ```
-+--------------------------+
-|        Margin            |
-|  +--------------------+  |
-|  |      Border        |  |
-|  |  +------------+  |  |
-|  |  |  Padding  |  |  |
-|  |  | Content   |  |  |
-|  |  +------------+  |  |
-|  +--------------------+  |
-+--------------------------+
+![image](https://github.com/user-attachments/assets/b857f135-8fe4-4e73-adf1-4ad882188e1b)
+
 ```
 
 ### **Příklad kódu:**
