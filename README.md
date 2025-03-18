@@ -362,8 +362,8 @@ h1 + p {
 ---
 
 # Příklad použití 
-1️⃣ Vytvořte jednoduchý HTML soubor.  
-2️⃣ Přidejte do něj `<style>` a zkuste změnit barvy a písmo pomocí různých selektorů.  
+Vytvořte jednoduchý HTML soubor.  
+Přidejte do něj `<style>` a zkuste změnit barvy a písmo pomocí různých selektorů.  
 
 ```html
 <!DOCTYPE html>
