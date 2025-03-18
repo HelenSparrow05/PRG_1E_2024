@@ -350,7 +350,7 @@ Semantické HTML používá smysluplné tagy pro lepší čitelnost kódu.
 
 
 
-# CSS – princip a syntaxe
+# CSS
 
 ## Co je CSS?  
 CSS (*Cascading Style Sheets* – kaskádové styly) je jazyk, který se používá k úpravě vzhledu HTML stránek. Pomocí CSS můžeme změnit barvu textu, nastavit velikost písma, přidat rámečky, upravit mezery mezi prvky nebo dokonce přidat animace.  
