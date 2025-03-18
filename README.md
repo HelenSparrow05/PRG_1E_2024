@@ -450,7 +450,7 @@ V CSS se každý prvek na stránce chová jako obdélník a skládá se z těcht
 
 Responzivní design umožňuje, aby se webová stránka přizpůsobila různým velikostem obrazovek (mobil, tablet, PC).  
 
-## ** Media Queries**
+## **Media Queries**
 Media Queries umožňují změnit styl podle velikosti obrazovky.
 
 ### **Příklad:**
