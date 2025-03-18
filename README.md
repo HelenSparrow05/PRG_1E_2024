@@ -628,18 +628,92 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
-## JavaScript – funkce
-Funkce umožňují znovupoužití kódu.
+## Funkce
 
-### Příklad:
+# JavaScript – Funkce
+
+## Co je funkce?
+Funkce v JavaScriptu je **blok kódu**, který lze **opakovaně spouštět**. Funkce může přijímat **vstupní parametry**, provádět výpočty a **vracet výsledek**.
+Fukkce je blok kódu, kderý se sám nespustí, dokud není někde volán.
+
+### **Základní syntaxe funkce**
 ```js
-function pozdrav(jmeno) {
-    return "Ahoj, " + jmeno + "!";
+function jmenoFunkce(param1, param2) {
+    // Tělo funkce
+    return vysledek;
 }
-console.log(pozdrav("Pavle"));
 ```
+- `jmenoFunkce` – název funkce.
+- `param1, param2` – vstupní parametry (volitelné).
+- `return vysledek` – návratová hodnota (volitelná).
 
 ---
+
+## Jak se volá funkce?
+Funkci zavoláme jejím názvem a předáme jí parametry.
+
+### **Příklad volání funkce**
+```js
+function secti(a, b) {
+    return a + b;
+}
+
+var vysledek = secti(5, 3); // Funkce se zavolá s parametry 5 a 3
+console.log(vysledek); // Výstup: 8
+```
+**Funkce `secti(5, 3)` se vykoná a vrátí hodnotu `8`.**
+
+---
+
+## Co jsou vstupní parametry?
+Parametry jsou **proměnné**, které funkce přijímá jako vstup.
+
+### **Příklad s parametry**
+```js
+function pozdrav(jmeno) {
+    console.log("Ahoj, " + jmeno + "!");
+}
+
+pozdrav("Pavel"); // Výstup: Ahoj, Pavel!
+```
+👉 **`jmeno` je parametr, který přijímá hodnotu `"Pavel"`.**
+
+---
+
+## Co je návratový datový typ?
+
+### **Funkce s návratovou hodnotou**
+Funkce může **vracet hodnotu** pomocí `return`.
+
+```js
+function obvodObdelniku(sirka, vyska) {
+    return 2 * (sirka + vyska);
+}
+
+var obvod = obvodObdelniku(5, 10);
+console.log(obvod); // Výstup: 30
+```
+**Funkce `obvodObdelniku` vrátí výsledek výpočtu, který uložíme do proměnné `obvod`.**
+
+### **Funkce bez návratového typu (void funkce)**
+Pokud funkce nepoužívá `return`, pouze něco vykoná, ale nevrací hodnotu.
+
+```js
+function zobrazZpravu() {
+    console.log("Toto je zpráva!");
+}
+
+zobrazZpravu(); // Výstup: Toto je zpráva!
+```
+**Funkce pouze něco vypíše, ale nevrací žádnou hodnotu.**
+
+---
+
+## Shrnutí
+**Funkce** je blok kódu, který můžeme volat kdykoli.  
+**Vstupní parametry** předávají hodnoty funkci.  
+**Návratový typ** určuje, co funkce vrací (`return`).  
+**Funkce bez return** (void) nic nevrací, pouze vykoná akci.  
 
 ## JavaScript – události
 Události reagují na interakci uživatele, například kliknutí.
