@@ -224,33 +224,174 @@
 * zapisuje se jako: nazev=""
 
 
-# CSS
+# CSS – princip a syntaxe
 
-## CSS – princip a syntaxe
-CSS (Cascading Style Sheets) slouží k úpravě vzhledu webových stránek. Stylopis definuje barvy, velikosti písma, zarovnání prvků a další vizuální vlastnosti HTML prvků.
+## Co je CSS?  
+CSS (*Cascading Style Sheets* – kaskádové styly) je jazyk, který se používá k úpravě vzhledu HTML stránek. Pomocí CSS můžeme změnit barvu textu, nastavit velikost písma, přidat rámečky, upravit mezery mezi prvky nebo dokonce přidat animace.  
 
-### Příklad:
+CSS se zapisuje zvlášť mimo HTML kód a propojuje se pomocí `<link>` nebo se vkládá přímo do HTML souboru pomocí `<style>`.
+
+## Jak vypadá CSS kód?  
+Každé pravidlo v CSS se skládá z **selektoru**, **vlastnosti** a **hodnoty**.
+
 ```css
-body {
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
-}
-h1 {
-    color: navy;
-    text-align: center;
+selektor {
+    vlastnost: hodnota;
 }
 ```
 
-## CSS – selektory
-Selektory slouží k výběru HTML prvků, na které se aplikují styly.
+- **Selektor** – vybere HTML prvek, kterému chceme změnit styl (např. `h1`, `.nadpis`, `#logo`).
+- **Vlastnost** – určuje, co se má změnit (např. `color`, `font-size`, `background-color`).
+- **Hodnota** – nastaví konkrétní změnu (např. `red`, `20px`, `blue`).
 
-### Typy selektorů:
-- **Elementový**: `h1 { color: red; }`
-- **Třídový**: `.box { border: 1px solid black; }`
-- **ID selektor**: `#main { width: 80%; }`
-- **Potomek**: `div p { font-size: 14px; }`
+### Příklad použití:
+```css
+p {
+    color: blue; /* Změní barvu textu na modrou */
+    font-size: 18px; /* Nastaví velikost písma na 18 pixelů */
+}
+```
+
+Tento kód říká:  
+**Všem `<p>` odstavcům změň barvu na modrou a nastav velikost písma na 18 pixelů.**
 
 ---
+
+# CSS – selektory
+
+Selektory slouží k výběru HTML prvků, na které se bude aplikovat CSS styl.
+
+##  Základní selektory  
+### Elementový selektor  
+Vybírá všechny prvky daného typu (např. všechny `<p>` odstavce).  
+
+```css
+p {
+    color: green; /* Všechny odstavce budou zelené */
+}
+```
+
+### Třídový selektor (`.`)  
+Vybírá prvky, které mají danou třídu (`class`).  
+
+```css
+.nadpis {
+    font-weight: bold; /* Tučné písmo */
+    color: red; /* Červená barva */
+}
+```
+```html
+<h1 class="nadpis">Toto je nadpis</h1>
+<p class="nadpis">Toto je odstavec s červeným textem</p>
+```
+**Všechny prvky s `class="nadpis"` budou červené a tučné.**
+
+### ID selektor (`#`)  
+Vybírá jediný konkrétní prvek podle jeho ID (`id`).  
+
+```css
+#hlavni-text {
+    font-size: 24px;
+    text-align: center;
+}
+```
+```html
+<p id="hlavni-text">Toto je speciální text.</p>
+```
+**Používáme pro unikátní prvky, které jsou na stránce jen jednou.**  
+
+---
+
+## Pokročilé selektory  
+### Potomek (` `)  
+Vybírá prvky uvnitř jiného prvku.  
+
+```css
+div p {
+    color: purple;
+}
+```
+```html
+<div>
+    <p>Tento text bude fialový.</p>
+</div>
+<p>Tento text NEbude fialový.</p>
+```
+**Pouze odstavce uvnitř `<div>` budou fialové.**
+
+### Přímý potomek (`>`)  
+Vybírá jen prvky, které jsou hned uvnitř rodiče.  
+
+```css
+div > p {
+    color: orange;
+}
+```
+```html
+<div>
+    <p>Tento odstavec bude oranžový.</p>
+    <span>
+        <p>Tento už oranžový nebude.</p>
+    </span>
+</div>
+```
+**Pouze `<p>`, které jsou přímo uvnitř `<div>`, změní barvu.**
+
+### Souslednost (`+`)  
+Vybírá prvek, který následuje hned za jiným.  
+
+```css
+h1 + p {
+    color: pink;
+}
+```
+```html
+<h1>Nadpis</h1>
+<p>Tento odstavec bude růžový.</p>
+<p>Tento už ne.</p>
+```
+**Pouze první `<p>` za `<h1>` bude růžový.**
+
+---
+
+# Co si z toho vzít?
+**Selektor** vybírá HTML prvek, kterému chceme změnit styl.  
+**Vlastnost** určuje, co se mění (barva, velikost písma, okraje).  
+**Hodnota** definuje, jak se to změní (např. `red`, `20px`, `bold`).  
+
+---
+
+# Příklad použití 
+1️⃣ Vytvořte jednoduchý HTML soubor.  
+2️⃣ Přidejte do něj `<style>` a zkuste změnit barvy a písmo pomocí různých selektorů.  
+
+```html
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje první CSS</title>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        p {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ahoj, svět!</h1>
+    <p>Tento text bude zelený.</p>
+</body>
+</html>
+```
 
 ## CSS – barvy
 Barvy lze zadávat několika způsoby:
