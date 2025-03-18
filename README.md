@@ -403,29 +403,176 @@ Barvy lze zadávat několika způsoby:
 ### Příklad:
 ```css
 h1 {
-    color: #ff5733;
-    background-color: rgba(0, 0, 0, 0.1);
+    color: #ff5733;  /* Změní barvu textu*/
+    background-color: rgba(0, 0, 0, 0.1); /* Změní barvu pozadí*/
 }
 ```
 
 ---
 
-## CSS – Box Model
-Každý HTML prvek se skládá z:
-1. **Content** (obsah)
-2. **Padding** (vnitřní odsazení)
-3. **Border** (rámeček)
-4. **Margin** (vnější odsazení)
+# **CSS – Box Model**
 
-### Příklad:
+## **Co je Box Model?**
+V CSS se každý prvek na stránce chová jako obdélník a skládá se z těchto částí:
+1. **Obsah (Content)** – hlavní část prvku, obsahuje text nebo obrázek.
+2. **Vnitřní odsazení (Padding)** – mezera mezi obsahem a rámečkem.
+3. **Okraj (Border)** – rámeček kolem prvku.
+4. **Vnější odsazení (Margin)** – mezera mezi prvkem a okolními prvky.
+
+### **Schéma Box Modelu:**
+```
++--------------------------+
+|        Margin            |
+|  +--------------------+  |
+|  |      Border        |  |
+|  |  +------------+  |  |
+|  |  |  Padding  |  |  |
+|  |  | Content   |  |  |
+|  |  +------------+  |  |
+|  +--------------------+  |
++--------------------------+
+```
+
+### **Příklad kódu:**
 ```css
 .box {
     width: 200px;
     padding: 10px;
-    border: 2px solid black;
+    border: 3px solid black;
     margin: 20px;
+    background-color: lightblue;
 }
 ```
+
+---
+
+# **CSS – Responzivní design**
+
+Responzivní design umožňuje, aby se webová stránka přizpůsobila různým velikostem obrazovek (mobil, tablet, PC).  
+
+## ** Media Queries**
+Media Queries umožňují změnit styl podle velikosti obrazovky.
+
+### **Příklad:**
+```css
+@media (max-width: 600px) {
+    body {
+        background-color: lightgrey;
+    }
+}
+```
+**Pokud je šířka obrazovky menší než 600px, změní se pozadí na šedé.**
+
+## **Flexibilní rozměry**
+Místo pevných hodnot (`px`) používáme relativní jednotky jako `%`, `vw`, `vh` nebo `em`.
+
+### **Příklad:**
+```css
+.container {
+    width: 80%;  /* Přizpůsobí se velikosti okna */
+    max-width: 1200px;  /* Maximální šířka */
+}
+```
+
+---
+
+# **CSS – Grid Layout**
+
+CSS Grid je moderní způsob, jak tvořit rozvržení stránky v mřížce.
+
+## **Vytvoření mřížky**
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 sloupce */
+    grid-template-rows: auto auto; /* 2 řádky */
+    gap: 10px; /* Mezery mezi prvky */
+}
+```
+
+## **Umístění prvků**
+```css
+.item1 {
+    grid-column: 1 / 3; /* Prvek zabere dva sloupce */
+    grid-row: 1; /* Umístění v prvním řádku */
+}
+```
+
+### **HTML struktura:**
+```html
+<div class="container">
+    <div class="item1">První</div>
+    <div class="item2">Druhý</div>
+    <div class="item3">Třetí</div>
+</div>
+```
+
+---
+
+# **CSS – Flow Layout**
+
+Flow Layout je přirozené chování prvků na stránce.
+
+## **Blokové vs. řádkové prvky**
+- **Blokové prvky** (`div`, `p`, `h1`) zabírají celou šířku.
+- **Řádkové prvky** (`span`, `a`) se řadí vedle sebe.
+
+## **Float**
+Float umožňuje obtékání obsahu.
+```css
+img {
+    float: right; /* Obrázek bude napravo */
+}
+```
+
+## **Flexbox**
+Flexbox umožňuje lépe zarovnávat prvky v řádku nebo sloupci.
+```css
+.container {
+    display: flex;
+    justify-content: space-between; /* Prvky budou od sebe */
+}
+```
+
+---
+
+# **CSS – Animace**
+
+CSS umožňuje jednoduché animace pomocí `@keyframes`.
+
+## **Základní animace**
+```css
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.box {
+    animation: fadeIn 2s ease-in-out;
+}
+```
+
+## **Transformace**
+```css
+.box:hover {
+    transform: rotate(10deg);
+}
+```
+
+## **Přechody**
+```css
+.button {
+    transition: background-color 0.5s ease-in-out;
+}
+.button:hover {
+    background-color: red;
+}
+```
+**Po najetí myší se tlačítko plynule změní na červené.**
 
 ---
 
