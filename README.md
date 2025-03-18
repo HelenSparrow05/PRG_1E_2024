@@ -668,7 +668,7 @@ function pozdrav(jmeno) {
 
 pozdrav("Pavel"); // Výstup: Ahoj, Pavel!
 ```
-👉 **`jmeno` je parametr, který přijímá hodnotu `"Pavel"`.**
+**`jmeno` je parametr, který přijímá hodnotu `"Pavel"`.**
 
 ---
 
