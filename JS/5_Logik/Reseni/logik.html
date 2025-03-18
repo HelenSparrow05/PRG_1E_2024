@@ -1,0 +1,18 @@
+<script>
+nahodneCislo = Math.floor(Math.random()*100)+1
+tip = Number(prompt("Zadejte svůj tip"))
+
+pocetPokusu = 0
+
+while(tip!=nahodneCislo){
+    pocetPokusu++
+    if(tip<nahodneCislo){
+        alert("Číslo je větší")
+    }else{
+        alert("Číslo je menší")
+    }
+    tip = Number(prompt("Zadejte svůj tip"))
+}
+alert("Gratulujeme! Uhádl jste číslo "+nahodneCislo+" na "+ pocetPokusu+ ". pokus.")
+
+</script>
