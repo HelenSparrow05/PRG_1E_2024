@@ -17,6 +17,22 @@
   - [Nejznámější poskytovatelé vzdálených repozitářů](#nejzn%C3%A1m%C4%9Bj%C5%A1%C3%AD-poskytovatel%C3%A9-vzd%C3%A1len%C3%BDch-repozit%C3%A1%C5%99%C5%AF)
   - [Nejdůležitější příkazy](#nejd%C5%AFle%C5%BEit%C4%9Bj%C5%A1%C3%AD-p%C5%99%C3%ADkazy)
 - [HTML](#html)
+- [CSS](#css)
+  - [CSS – princip a syntaxe](#css--princip-a-syntaxe)
+  - [CSS – selektory](#css--selektory)
+  - [CSS – barvy](#css--barvy)
+  - [CSS – písma](#css--písma)
+  - [CSS – Box Model](#css--box-model)
+  - [CSS – layout](#css--layout)
+  - [CSS – animace](#css--animace)
+- [JavaScript](#javascript)
+  - [JavaScript – princip a syntaxe](#javascript--princip-a-syntaxe)
+  - [JavaScript – proměnné](#javascript--proměnné)
+  - [JavaScript – větvení](#javascript--větvení)
+  - [JavaScript – cykly](#javascript--cykly)
+  - [JavaScript – funkce](#javascript--funkce)
+  - [JavaScript – události](#javascript--události)
+
 
 # Základní pojmy v oblasti www
 ## Internet
@@ -206,6 +222,148 @@
 ```
 
 * zapisuje se jako: nazev=""
+
+
+# CSS
+
+## CSS – princip a syntaxe
+CSS (Cascading Style Sheets) slouží k úpravě vzhledu webových stránek. Stylopis definuje barvy, velikosti písma, zarovnání prvků a další vizuální vlastnosti HTML prvků.
+
+### Příklad:
+```css
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: navy;
+    text-align: center;
+}
+```
+
+## CSS – selektory
+Selektory slouží k výběru HTML prvků, na které se aplikují styly.
+
+### Typy selektorů:
+- **Elementový**: `h1 { color: red; }`
+- **Třídový**: `.box { border: 1px solid black; }`
+- **ID selektor**: `#main { width: 80%; }`
+- **Potomek**: `div p { font-size: 14px; }`
+
+---
+
+## CSS – barvy
+Barvy lze zadávat několika způsoby:
+- Název barvy (`red`, `blue`)
+- HEX kód (`#ff5733`)
+- RGB (`rgb(255, 87, 51)`)
+- HSL (`hsl(10, 100%, 50%)`)
+
+### Příklad:
+```css
+h1 {
+    color: #ff5733;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+```
+
+---
+
+## CSS – Box Model
+Každý HTML prvek se skládá z:
+1. **Content** (obsah)
+2. **Padding** (vnitřní odsazení)
+3. **Border** (rámeček)
+4. **Margin** (vnější odsazení)
+
+### Příklad:
+```css
+.box {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}
+```
+
+---
+
+# JavaScript
+
+## JavaScript – princip a syntaxe
+JavaScript je skriptovací jazyk umožňující dynamické úpravy webových stránek. Kód lze spustit v prohlížeči.
+
+### Příklad:
+```js
+console.log("Ahoj, světe!");
+alert("Vítejte na stránce!");
+```
+
+---
+
+## JavaScript – proměnné
+Proměnné uchovávají data a mohou být deklarovány pomocí `var`, `let` nebo `const`.
+
+### Příklad:
+```js
+let jmeno = "Pavel";
+const vek = 25;
+console.log(jmeno + " má " + vek + " let.");
+```
+
+---
+
+## JavaScript – větvení
+Podmínky umožňují rozhodování v programu.
+
+### Příklad:
+```js
+let cislo = 10;
+if (cislo > 5) {
+    console.log("Číslo je větší než 5");
+} else {
+    console.log("Číslo je 5 nebo menší");
+}
+```
+
+---
+
+## JavaScript – cykly
+Cyklus umožňuje opakované provedení kódu.
+
+### Příklad:
+```js
+for (let i = 1; i <= 5; i++) {
+    console.log("Číslo: " + i);
+}
+```
+
+---
+
+## JavaScript – funkce
+Funkce umožňují znovupoužití kódu.
+
+### Příklad:
+```js
+function pozdrav(jmeno) {
+    return "Ahoj, " + jmeno + "!";
+}
+console.log(pozdrav("Pavle"));
+```
+
+---
+
+## JavaScript – události
+Události reagují na interakci uživatele, například kliknutí.
+
+### Příklad:
+```html
+<button onclick="alert('Kliknuto!')">Klikni mě</button>
+```
+
+---
+
+
 
 
 
