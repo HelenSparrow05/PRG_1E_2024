@@ -49,7 +49,7 @@
   - [JavaScript – práce se stringy](#javascript--práce-se-stringy)
   - [JavaScript – pole](#javascript--pole)
   - [JavaScript – funkce](#javascript--funkce)
-  - [JavaScript – události](#javascript--události)
+
 
 
 
