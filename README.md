@@ -168,12 +168,17 @@
 ## GitHub Pages
 * GitHub jako takový, poskytuje velmi jednoduchý hosting pro vaše webové stránky
 * Když je repozitář public stačí jít do Settings-Pages a zde vybrat větev a uložit
+
+---
 # HTML
+
+## Co je HTML?
 * Hypertext Markup Language – značkovací jazyk
 * Základní jazyk pro tvorbu webových stránek
 * Účel je psaní html dokumentů a jejich účelem je zobrazení ve webovém prohlížeči
 * Snaha popsat strukturu a obsah webové stránky pomocí speciálních značek (tagů), které umožňují prohlížeči interpretovat obsah stránky a zobrazit ji v grafické podobě pro uživatele
 * Konkrétně HTML definuje strukturu stránky – nadpisy, texty, odkazy, obrázky, tabulky a další prvky. Tyto prvky jsou pak dále formátovány pomocí dalších technologií, jako je CSS (Cascading Style Sheets) nebo    JavaScript, aby byly webové stránky interaktivní pro uživatele
+
 ## HTML Tagy
 * Toto je html element a je tvořen pomocí jednotlivých tagů
 
@@ -183,45 +188,166 @@
 * Dělíme je na:
   * párové - mají počátecní a ukončovací tag (<p></p> ukončovací tag se zapisuje stejně jako počáteční jenom je za první špičatou závorkou lomeno)
   * nepárové mají pouze začáteční tag
-### Základní tagy
-```
-<!DOCTYPE html> - Slouží k tomu aby prohlížeč rozpoznal html dokument, nepárový
 
-<html></html> - Slouží k vymezení prostoru kde budeme psát html tagy, párový
 
-<head></head> - K definování obsahu který se nezobrazí na stránce
+## Struktura HTML dokumentu
 
-<body></body> - K definování obsahu který se zobrazí na stránce
-```
-
-```
-<p> - text, párový
-
-<h1> až <h6> - nadpisy h1 je největší a h6 nejmenší , párový
-
-<a href="URL">Text odkazu</a> - odkaz, párový
-
-<ul> - odrázkovitý seznam, párový
-
-<ol> - číselný seznam, párový
-
-<li> - jednotlivé položky seznamu, párový
-
-<img src="cesta_k_obrazku" alt="popis"> - obrázek, nepárový"
-
-<!-- Komentář -->
-```
-## HTML Atributy
- * K upřesnění html elementu
-
+Každý HTML dokument začíná následujícím základním kódem:
 
 ```html
-<!-- příklad -->
-<img src="cesta_k_obrazku" alt="popis">
-<!-- zde je atribut src="cesta_k_obrazku" a druhý atribut je alt="popis"-->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Název stránky</title>
+</head>
+<body>
+    <h1>Vítejte na mé stránce</h1>
+    <p>Toto je odstavec.</p>
+</body>
+</html>
 ```
 
-* zapisuje se jako: nazev=""
+### **Vysvětlení částí dokumentu:**
+- `<!DOCTYPE html>` – Určuje, že se jedná o HTML5 dokument.
+- `<html>` – Kořenový prvek celého dokumentu.
+- `<head>` – Obsahuje **meta informace** (nastavení stránky).
+- `<title>` – Název stránky (zobrazuje se v záložce prohlížeče).
+- `<meta charset="UTF-8">` – Nastavuje správné kódování textu (čeština).
+- `<body>` – Hlavní část, kde je viditelný obsah stránky.
+
+---
+
+## HTML Tagy
+
+HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit obsah.
+
+### **Základní tagy**
+```html
+<h1>Nadpis 1</h1>  <!-- Největší nadpis -->
+<p>Odstavec textu.</p>  <!-- Odstavec -->
+<a href="https://example.com">Toto je odkaz</a>  <!-- Odkaz -->
+<img src="obrazek.jpg" alt="Popis obrázku">  <!-- Obrázek -->
+<ul>
+    <li>První položka</li>
+    <li>Druhá položka</li>
+</ul>  <!-- Nečíslovaný seznam -->
+```
+
+### **Párové vs. nepárové tagy**
+- **Párové tagy** mají **začátek** a **konec** (`<p></p>`).
+- **Nepárové tagy** nemají konečný tag (`<img>`, `<br>`, `<hr>`).
+
+---
+
+## Odkazy a obrázky
+
+### **Odkazy (`<a>` tag)**
+```html
+<a href="https://www.google.com">Google</a>
+```
+
+### **Otevření odkazu v novém okně**
+```html
+<a href="https://www.google.com" target="_blank">Google</a>
+```
+
+### **Obrázky (`<img>` tag)**
+```html
+<img src="obrazek.jpg" alt="Popis obrázku" width="200" height="100">
+```
+
+**`alt`** popisuje obrázek pro uživatele i vyhledávače.
+
+---
+
+## Seznamy
+
+### **Nečíslovaný seznam (`<ul>`)**
+```html
+<ul>
+    <li>První položka</li>
+    <li>Druhá položka</li>
+</ul>
+```
+
+### **Číslovaný seznam (`<ol>`)**
+```html
+<ol>
+    <li>První položka</li>
+    <li>Druhá položka</li>
+</ol>
+```
+
+---
+
+## Tabulky
+
+### **Vytvoření tabulky**
+```html
+<table border="1">
+    <tr>
+        <th>Jméno</th>
+        <th>Věk</th>
+    </tr>
+    <tr>
+        <td>Anna</td>
+        <td>25</td>
+    </tr>
+</table>
+```
+
+### **Vysvětlení:**
+- `<table>` – tabulka.
+- `<tr>` – řádek tabulky.
+- `<th>` – hlavička sloupce.
+- `<td>` – buňka tabulky.
+
+---
+
+## Formuláře
+
+### **Jednoduchý formulář**
+```html
+<form action="odeslani.php" method="post">
+    <label for="jmeno">Jméno:</label>
+    <input type="text" id="jmeno" name="jmeno">
+    <input type="submit" value="Odeslat">
+</form>
+```
+
+### **Vysvětlení:**
+- `<form>` – definuje formulář.
+- `<input>` – pole pro vstup dat.
+- `type="text"` – textové pole.
+- `type="submit"` – tlačítko pro odeslání.
+- `method="post"` – způsob odeslání dat na server.
+
+---
+
+## Semantické HTML
+
+Semantické HTML používá smysluplné tagy pro lepší čitelnost kódu.
+
+```html
+<header>Hlavička stránky</header>
+<nav>Menu</nav>
+<section>Obsah</section>
+<article>Článek</article>
+<footer>Patička stránky</footer>
+```
+
+---
+
+
+## Shrnutí
+
+**HTML definuje strukturu webové stránky.**  
+**Používáme značky (tagy), jako `<p>`, `<h1>`, `<a>`.**  
+**Formuláře umožňují interakci s uživateli.**  
+**Semantické HTML zlepšuje přístupnost.**  
+
 
 
 # CSS – princip a syntaxe
