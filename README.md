@@ -1,49 +1,72 @@
 # Obsah
-- [Základní pojmy v oblasti www](#z%C3%A1kladn%C3%AD-pojmy-v-oblasti-www)
+
+- [Základní pojmy v oblasti www](#základní-pojmy-v-oblasti-www)
   - [Internet](#internet)
-  - [Webová stránka](#webov%C3%A1-str%C3%A1nka)
-  - [Webový prohlížeč](#webov%C3%BD-prohl%C3%AD%C5%BEe%C4%8D)
-  - [Webový server](#webov%C3%BD-server)
-  - [Odpovědi serveru](#odpov%C4%9Bdi-serveru)
+  - [Webová stránka](#webová-stránka)
+  - [Webový prohlížeč](#webový-prohlížeč)
+  - [Webový server](#webový-server)
+  - [Odpovědi serveru](#odpovědi-serveru)
   - [HTTP/HTTPS](#httphttps)
-  - [Doména](#dom%C3%A9na)
+  - [Doména](#doména)
   - [Webhosting](#webhosting)
-  - [Redakční systémy](#redak%C4%8Dn%C3%AD-syst%C3%A9my)
+  - [Redakční systémy](#redakční-systémy)
   - [FTP](#ftp)
   - [HTML dokument](#html-dokument)
   - [WhoIs](#whois)
+
 - [GitHub](#github)
   - [Git](#git)
-  - [Nejznámější poskytovatelé vzdálených repozitářů](#nejzn%C3%A1m%C4%9Bj%C5%A1%C3%AD-poskytovatel%C3%A9-vzd%C3%A1len%C3%BDch-repozit%C3%A1%C5%99%C5%AF)
-  - [Nejdůležitější příkazy](#nejd%C5%AFle%C5%BEit%C4%9Bj%C5%A1%C3%AD-p%C5%99%C3%ADkazy)
+  - [Nejznámější poskytovatelé vzdálených repozitářů](#nejznámější-poskytovatelé-vzdálených-repozitářů)
+  - [Nejdůležitější příkazy](#nejdůležitější-příkazy)
+
 - [HTML](#html)
+  - [Co je HTML?](#co-je-html)
+  - [Struktura HTML dokumentu](#struktura-html-dokumentu)
+  - [HTML Tagy](#html-tagy)
+  - [Odkazy a obrázky](#odkazy-a-obrázky)
+  - [Seznamy](#seznamy)
+  - [Tabulky](#tabulky)
+  - [Formuláře](#formuláře)
+  - [Semantické HTML](#semantické-html)
+  - [Shrnutí](#shrnutí)
+
 - [CSS](#css)
   - [CSS – princip a syntaxe](#css--princip-a-syntaxe)
   - [CSS – selektory](#css--selektory)
   - [CSS – barvy](#css--barvy)
   - [CSS – písma](#css--písma)
   - [CSS – Box Model](#css--box-model)
-  - [CSS – layout](#css--layout)
-  - [CSS – animace](#css--animace)
+  - [CSS – Responzivní design](#css--responzivní-design)
+  - [CSS – Grid Layout](#css--grid-layout)
+  - [CSS – Flow Layout](#css--flow-layout)
+  - [CSS – Animace](#css--animace)
+
 - [JavaScript](#javascript)
   - [JavaScript – princip a syntaxe](#javascript--princip-a-syntaxe)
   - [JavaScript – proměnné](#javascript--proměnné)
   - [JavaScript – větvení](#javascript--větvení)
   - [JavaScript – cykly](#javascript--cykly)
+  - [JavaScript – práce se stringy](#javascript--práce-se-stringy)
+  - [JavaScript – pole](#javascript--pole)
   - [JavaScript – funkce](#javascript--funkce)
   - [JavaScript – události](#javascript--události)
 
 
+
 # Základní pojmy v oblasti www
+
 ## Internet
+
 * Globální síť propojených počítačů, která umožňuje komunikaci a výměnu dat mezi uživateli na celém světě
 * Síť spojující sítě
 ## Webová stránka
+
 * Je jeden z mnoha způsobů, jakým lze využít internet
 * Webová stránka je dokument, který obsahuje text, obrázky, videa, odkazy a další prvky, které mohou být zobrazeny pomocí webového prohlížeče
 * Webová stránka je už interpretovaný HTML dokument otevřený v nějakém webovém prohlížeči.
 
 ## Webový prohlížeč
+
 * Program, který umožňuje uživatelům prohlížet webové stránky v grafické podobě
 * Prohlížeč stahuje HTML dokumenty a další soubory, které jsou součástí webové stránky, a poté je zobrazuje na obrazovce uživatele
 * Mezi nejpopulárnější webové prohlížeče patří Google Chrome, Mozilla Firefox, Microsoft Edge a Apple Safari
@@ -54,12 +77,14 @@
 
 
 ## Webový server
+
 * Zde jsou uloženy stránky, ke kterým se dostanu pomocí požadavků (http, https).
 * Počítačový systém, který poskytuje webové stránky uživatelům
 * Když uživatel zadá do webového prohlížeče adresu webové stránky, prohlížeč pošle požadavek na webový server, který poté odešle HTML dokumenty a další soubory zpět na uživatelem používaný počítač
 * Běží na specializovaném softwaru např.: Apache nebo Nginx
   
 ## Odpovědi serveru
+
 * Při odeslání požadavku na server se nám vrátí odpověď.
 * Tato odpověď přijde ve formě kódu např.: 10x (stovkové) a za x se doplňují jednotlivé kódy
 * [Přesný seznam kódů](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
@@ -75,6 +100,7 @@
 
 
 ## HTTP/HTTPS
+
 * Hypertext Transfer Protocol
 * Je základním protokolem, který se používá pro přenos dat mezi webovým prohlížečem a webovým serverem
 * HTTP umožňuje prohlížeči odesílat požadavky na server, například požadavek na konkrétní stránku nebo soubor, a server poté na tyto požadavky odpovídat, například odesláním HTML dokumentu nebo jiného souboru
@@ -90,6 +116,7 @@
  ![image](https://github.com/user-attachments/assets/e37e9b77-6bd9-4bcf-8782-429e85272284)
 
 ## Doména
+
 * Doménové jméno
   
 ![image](https://github.com/user-attachments/assets/ed1cb7a2-33d6-4856-b776-96c161291241)
@@ -100,9 +127,11 @@
 * Subdomén může být pod určitou doménou více
 
 ## Webhosting
+
 * Webhosting je pronájem prostoru pro webové stránky na cizím serveru.
   
 ## Redakční systémy
+
 *Systémy umožňující vytvořit webovou stránku rychleji bez velkých programátorských znalostí
 * Nejznámější redakční systémy
   * Wordpress
@@ -115,23 +144,29 @@
     ![image](https://github.com/user-attachments/assets/e1653ff6-bec6-4663-867e-7b91c2677670)
 
 ## FTP
+
 * File Transfer Protocol
 * Slouží k přenosu souborů od uživatele na webový server.
 
 ## HTML Dokument
+
 * Jedná se o textový soubor obsahující kódování, které určuje strukturu, vzhled a funkce webové stránky
 
 
 ## WhoIs
+
 * Označení pro databázi, která slouží k evidenci údajů o majitelích internetových domén.
 * Všechny domény v České republice registruje CZ.NIC
 
 ## SEO
+
 * Search engine optimization
 * Cílem je kód optimalizovat tak aby se určená URL zobrazovala na předních místech vyhledávačů
 
 # GitHub
+
 ## Git
+
 * [Podrodné informace](https://www.itnetwork.cz/programovani/git/git-tutorial-historie-a-principy)
 * verzovací systém určený ke sledování změn v souborech a ke koordinaci práce mezi lidmi na různých verzích těchto souborů
 * Stav projektu ukládáme do verzí.
@@ -144,6 +179,7 @@
 ![image](https://github.com/user-attachments/assets/be72c64a-fdbc-4e40-8584-4aa8a051e3ae)
 
 ## Nejznámější poskytovatelé vzdálených repozitářů
+
 * GitHub
   
   ![image](https://github.com/user-attachments/assets/8daf71b9-3ba2-42df-bbb6-f421c26b14aa)
@@ -153,26 +189,34 @@
   ![image](https://github.com/user-attachments/assets/76e1c91f-c388-458f-9880-ba284ccdc768)
 
 ## Nejdůležitější příkazy
-### Nastavení jména a emailu
+
+## Nastavení jména a emailu
+
 * git config --global user.name
 * git config --global user.email
-### Pro vložení
+## Pro vložení
+
 * git add
 * git commit -m "message"
 * git push
-### Pro stažení k sobě
+## Pro stažení k sobě
+
 * git clone
 ## GitHub README.md
+
 * Je to v rámci github repozitáře soubor, který se používá jako dokumentace
 * <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Základní syntaxe jak psát README.md</a>
 ## GitHub Pages
+
 * GitHub jako takový, poskytuje velmi jednoduchý hosting pro vaše webové stránky
 * Když je repozitář public stačí jít do Settings-Pages a zde vybrat větev a uložit
 
 ---
 # HTML
 
+
 ## Co je HTML?
+
 * Hypertext Markup Language – značkovací jazyk
 * Základní jazyk pro tvorbu webových stránek
 * Účel je psaní html dokumentů a jejich účelem je zobrazení ve webovém prohlížeči
@@ -180,6 +224,7 @@
 * Konkrétně HTML definuje strukturu stránky – nadpisy, texty, odkazy, obrázky, tabulky a další prvky. Tyto prvky jsou pak dále formátovány pomocí dalších technologií, jako je CSS (Cascading Style Sheets) nebo    JavaScript, aby byly webové stránky interaktivní pro uživatele
 
 ## HTML Tagy
+
 * Toto je html element a je tvořen pomocí jednotlivých tagů
 
 <img src="https://github.com/user-attachments/assets/352b9bbd-cf40-4d0c-ba39-ed1bc63084ca" width="20%">
@@ -191,6 +236,7 @@
 
 
 ## Struktura HTML dokumentu
+
 
 Každý HTML dokument začíná následujícím základním kódem:
 
@@ -209,7 +255,8 @@ Každý HTML dokument začíná následujícím základním kódem:
 </html>
 ```
 
-### **Vysvětlení částí dokumentu:**
+## **Vysvětlení částí dokumentu:**
+
 - `<!DOCTYPE html>` – Určuje, že se jedná o HTML5 dokument.
 - `<html>` – Kořenový prvek celého dokumentu.
 - `<head>` – Obsahuje **meta informace** (nastavení stránky).
@@ -221,9 +268,11 @@ Každý HTML dokument začíná následujícím základním kódem:
 
 ## HTML Tagy
 
+
 HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit obsah.
 
-### **Základní tagy**
+## **Základní tagy**
+
 ```html
 <h1>Nadpis 1</h1>  <!-- Největší nadpis -->
 <p>Odstavec textu.</p>  <!-- Odstavec -->
@@ -235,7 +284,8 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 </ul>  <!-- Nečíslovaný seznam -->
 ```
 
-### **Párové vs. nepárové tagy**
+## **Párové vs. nepárové tagy**
+
 - **Párové tagy** mají **začátek** a **konec** (`<p></p>`).
 - **Nepárové tagy** nemají konečný tag (`<img>`, `<br>`, `<hr>`).
 
@@ -243,17 +293,21 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 
 ## Odkazy a obrázky
 
-### **Odkazy (`<a>` tag)**
+
+## **Odkazy (`<a>` tag)**
+
 ```html
 <a href="https://www.google.com">Google</a>
 ```
 
-### **Otevření odkazu v novém okně**
+## **Otevření odkazu v novém okně**
+
 ```html
 <a href="https://www.google.com" target="_blank">Google</a>
 ```
 
-### **Obrázky (`<img>` tag)**
+## **Obrázky (`<img>` tag)**
+
 ```html
 <img src="obrazek.jpg" alt="Popis obrázku" width="200" height="100">
 ```
@@ -264,7 +318,9 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 
 ## Seznamy
 
-### **Nečíslovaný seznam (`<ul>`)**
+
+## **Nečíslovaný seznam (`<ul>`)**
+
 ```html
 <ul>
     <li>První položka</li>
@@ -272,7 +328,8 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 </ul>
 ```
 
-### **Číslovaný seznam (`<ol>`)**
+## **Číslovaný seznam (`<ol>`)**
+
 ```html
 <ol>
     <li>První položka</li>
@@ -284,7 +341,9 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 
 ## Tabulky
 
-### **Vytvoření tabulky**
+
+## **Vytvoření tabulky**
+
 ```html
 <table border="1">
     <tr>
@@ -298,7 +357,8 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 </table>
 ```
 
-### **Vysvětlení:**
+## **Vysvětlení:**
+
 - `<table>` – tabulka.
 - `<tr>` – řádek tabulky.
 - `<th>` – hlavička sloupce.
@@ -308,7 +368,9 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 
 ## Formuláře
 
-### **Jednoduchý formulář**
+
+## **Jednoduchý formulář**
+
 ```html
 <form action="odeslani.php" method="post">
     <label for="jmeno">Jméno:</label>
@@ -317,7 +379,8 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 </form>
 ```
 
-### **Vysvětlení:**
+## **Vysvětlení:**
+
 - `<form>` – definuje formulář.
 - `<input>` – pole pro vstup dat.
 - `type="text"` – textové pole.
@@ -327,6 +390,7 @@ HTML používá **značky (tagy)**, které říkají prohlížeči, jak zobrazit
 ---
 
 ## Semantické HTML
+
 
 Semantické HTML používá smysluplné tagy pro lepší čitelnost kódu.
 
@@ -343,6 +407,7 @@ Semantické HTML používá smysluplné tagy pro lepší čitelnost kódu.
 
 ## Shrnutí
 
+
 **HTML definuje strukturu webové stránky.**  
 **Používáme značky (tagy), jako `<p>`, `<h1>`, `<a>`.**  
 **Formuláře umožňují interakci s uživateli.**  
@@ -352,12 +417,15 @@ Semantické HTML používá smysluplné tagy pro lepší čitelnost kódu.
 
 # CSS
 
-## Co je CSS?  
+
+## Co je CSS?
+
 CSS (*Cascading Style Sheets* – kaskádové styly) je jazyk, který se používá k úpravě vzhledu HTML stránek. Pomocí CSS můžeme změnit barvu textu, nastavit velikost písma, přidat rámečky, upravit mezery mezi prvky nebo dokonce přidat animace.  
 
 CSS se zapisuje zvlášť mimo HTML kód a propojuje se pomocí `<link>` nebo se vkládá přímo do HTML souboru pomocí `<style>`.
 
-## Jak vypadá CSS kód?  
+## Jak vypadá CSS kód?
+
 Každé pravidlo v CSS se skládá z **selektoru**, **vlastnosti** a **hodnoty**.
 
 ```css
@@ -370,7 +438,8 @@ selektor {
 - **Vlastnost** – určuje, co se má změnit (např. `color`, `font-size`, `background-color`).
 - **Hodnota** – nastaví konkrétní změnu (např. `red`, `20px`, `blue`).
 
-### Příklad použití:
+## Příklad použití:
+
 ```css
 p {
     color: blue; /* Změní barvu textu na modrou */
@@ -385,10 +454,13 @@ Tento kód říká:
 
 # CSS – selektory
 
+
 Selektory slouží k výběru HTML prvků, na které se bude aplikovat CSS styl.
 
-##  Základní selektory  
-### Elementový selektor  
+##  Základní selektory
+
+## Elementový selektor
+
 Vybírá všechny prvky daného typu (např. všechny `<p>` odstavce).  
 
 ```css
@@ -397,7 +469,8 @@ p {
 }
 ```
 
-### Třídový selektor (`.`)  
+## Třídový selektor (`.`)
+
 Vybírá prvky, které mají danou třídu (`class`).  
 
 ```css
@@ -412,11 +485,13 @@ Vybírá prvky, které mají danou třídu (`class`).
 ```
 **Všechny prvky s `class="nadpis"` budou červené a tučné.**
 
-### ID selektor (`#`)  
+## ID selektor (`#`)
+
 Vybírá jediný konkrétní prvek podle jeho ID (`id`).  
 
 ```css
 #hlavni-text {
+
     font-size: 24px;
     text-align: center;
 }
@@ -428,8 +503,10 @@ Vybírá jediný konkrétní prvek podle jeho ID (`id`).
 
 ---
 
-## Pokročilé selektory  
-### Potomek (` `)  
+## Pokročilé selektory
+
+## Potomek (` `)
+
 Vybírá prvky uvnitř jiného prvku.  
 
 ```css
@@ -445,7 +522,8 @@ div p {
 ```
 **Pouze odstavce uvnitř `<div>` budou fialové.**
 
-### Přímý potomek (`>`)  
+## Přímý potomek (`>`)
+
 Vybírá jen prvky, které jsou hned uvnitř rodiče.  
 
 ```css
@@ -463,7 +541,8 @@ div > p {
 ```
 **Pouze `<p>`, které jsou přímo uvnitř `<div>`, změní barvu.**
 
-### Souslednost (`+`)  
+## Souslednost (`+`)
+
 Vybírá prvek, který následuje hned za jiným.  
 
 ```css
@@ -481,13 +560,15 @@ h1 + p {
 ---
 
 # Co si z toho vzít?
+
 **Selektor** vybírá HTML prvek, kterému chceme změnit styl.  
 **Vlastnost** určuje, co se mění (barva, velikost písma, okraje).  
 **Hodnota** definuje, jak se to změní (např. `red`, `20px`, `bold`).  
 
 ---
 
-# Příklad použití 
+# Příklad použití
+
 Vytvořte jednoduchý HTML soubor.  
 Přidejte do něj `<style>` a zkuste změnit barvy a písmo pomocí různých selektorů.  
 
@@ -520,13 +601,15 @@ Přidejte do něj `<style>` a zkuste změnit barvy a písmo pomocí různých se
 ```
 
 ## CSS – barvy
+
 Barvy lze zadávat několika způsoby:
 - Název barvy (`red`, `blue`)
 - HEX kód (`#ff5733`)
 - RGB (`rgb(255, 87, 51)`)
 - HSL (`hsl(10, 100%, 50%)`)
 
-### Příklad:
+## Příklad:
+
 ```css
 h1 {
     color: #ff5733;  /* Změní barvu textu*/
@@ -538,20 +621,24 @@ h1 {
 
 # **CSS – Box Model**
 
+
 ## **Co je Box Model?**
+
 V CSS se každý prvek na stránce chová jako obdélník a skládá se z těchto částí:
 1. **Obsah (Content)** – hlavní část prvku, obsahuje text nebo obrázek.
 2. **Vnitřní odsazení (Padding)** – mezera mezi obsahem a rámečkem.
 3. **Okraj (Border)** – rámeček kolem prvku.
 4. **Vnější odsazení (Margin)** – mezera mezi prvkem a okolními prvky.
 
-### **Schéma Box Modelu:**
+## **Schéma Box Modelu:**
+
 
 ![image](https://github.com/user-attachments/assets/b857f135-8fe4-4e73-adf1-4ad882188e1b)
 
 
 
-### **Příklad kódu:**
+## **Příklad kódu:**
+
 ```css
 .box {
     width: 200px;
@@ -566,12 +653,15 @@ V CSS se každý prvek na stránce chová jako obdélník a skládá se z těcht
 
 # **CSS – Responzivní design**
 
+
 Responzivní design umožňuje, aby se webová stránka přizpůsobila různým velikostem obrazovek (mobil, tablet, PC).  
 
 ## **Media Queries**
+
 Media Queries umožňují změnit styl podle velikosti obrazovky.
 
-### **Příklad:**
+## **Příklad:**
+
 ```css
 @media (max-width: 600px) {
     body {
@@ -582,9 +672,11 @@ Media Queries umožňují změnit styl podle velikosti obrazovky.
 **Pokud je šířka obrazovky menší než 600px, změní se pozadí na šedé.**
 
 ## **Flexibilní rozměry**
+
 Místo pevných hodnot (`px`) používáme relativní jednotky jako `%`, `vw`, `vh` nebo `em`.
 
-### **Příklad:**
+## **Příklad:**
+
 ```css
 .container {
     width: 80%;  /* Přizpůsobí se velikosti okna */
@@ -596,9 +688,11 @@ Místo pevných hodnot (`px`) používáme relativní jednotky jako `%`, `vw`, `
 
 # **CSS – Grid Layout**
 
+
 CSS Grid je moderní způsob, jak tvořit rozvržení stránky v mřížce.
 
 ## **Vytvoření mřížky**
+
 ```css
 .container {
     display: grid;
@@ -609,6 +703,7 @@ CSS Grid je moderní způsob, jak tvořit rozvržení stránky v mřížce.
 ```
 
 ## **Umístění prvků**
+
 ```css
 .item1 {
     grid-column: 1 / 3; /* Prvek zabere dva sloupce */
@@ -616,7 +711,8 @@ CSS Grid je moderní způsob, jak tvořit rozvržení stránky v mřížce.
 }
 ```
 
-### **HTML struktura:**
+## **HTML struktura:**
+
 ```html
 <div class="container">
     <div class="item1">První</div>
@@ -629,13 +725,16 @@ CSS Grid je moderní způsob, jak tvořit rozvržení stránky v mřížce.
 
 # **CSS – Flow Layout**
 
+
 Flow Layout je přirozené chování prvků na stránce.
 
 ## **Blokové vs. řádkové prvky**
+
 - **Blokové prvky** (`div`, `p`, `h1`) zabírají celou šířku.
 - **Řádkové prvky** (`span`, `a`) se řadí vedle sebe.
 
 ## **Float**
+
 Float umožňuje obtékání obsahu.
 ```css
 img {
@@ -644,6 +743,7 @@ img {
 ```
 
 ## **Flexbox**
+
 Flexbox umožňuje lépe zarovnávat prvky v řádku nebo sloupci.
 ```css
 .container {
@@ -656,9 +756,11 @@ Flexbox umožňuje lépe zarovnávat prvky v řádku nebo sloupci.
 
 # **CSS – Animace**
 
+
 CSS umožňuje jednoduché animace pomocí `@keyframes`.
 
 ## **Základní animace**
+
 ```css
 @keyframes fadeIn {
     from {
@@ -675,6 +777,7 @@ CSS umožňuje jednoduché animace pomocí `@keyframes`.
 ```
 
 ## **Transformace**
+
 ```css
 .box:hover {
     transform: rotate(10deg);
@@ -682,6 +785,7 @@ CSS umožňuje jednoduché animace pomocí `@keyframes`.
 ```
 
 ## **Přechody**
+
 ```css
 .button {
     transition: background-color 0.5s ease-in-out;
@@ -696,10 +800,13 @@ CSS umožňuje jednoduché animace pomocí `@keyframes`.
 
 # JavaScript
 
+
 ## JavaScript – princip a syntaxe
+
 JavaScript je skriptovací jazyk umožňující dynamické úpravy webových stránek. Kód lze spustit v prohlížeči.
 
-### Příklad:
+## Příklad:
+
 ```js
 console.log("Ahoj, světe!");
 alert("Vítejte na stránce!");
@@ -708,9 +815,11 @@ alert("Vítejte na stránce!");
 ---
 
 ## JavaScript – proměnné
+
 Proměnné uchovávají data a mohou být deklarovány pomocí `var`, `let` nebo `const`.
 
-### Příklad:
+## Příklad:
+
 ```js
 let jmeno = "Pavel";
 const vek = 25;
@@ -720,9 +829,11 @@ console.log(jmeno + " má " + vek + " let.");
 ---
 
 ## JavaScript – větvení
+
 Podmínky umožňují rozhodování v programu.
 
-### Příklad:
+## Příklad:
+
 ```js
 let cislo = 10;
 if (cislo > 5) {
@@ -735,9 +846,11 @@ if (cislo > 5) {
 ---
 
 ## JavaScript – cykly
+
 Cyklus umožňuje opakované provedení kódu.
 
-### Příklad:
+## Příklad:
+
 ```js
 for (let i = 1; i <= 5; i++) {
     console.log("Číslo: " + i);
@@ -748,13 +861,17 @@ for (let i = 1; i <= 5; i++) {
 
 ## Funkce
 
+
 # JavaScript – Funkce
 
+
 ## Co je funkce?
+
 Funkce v JavaScriptu je **blok kódu**, který lze **opakovaně spouštět**. Funkce může přijímat **vstupní parametry**, provádět výpočty a **vracet výsledek**.
 Fukkce je blok kódu, kderý se sám nespustí, dokud není někde volán.
 
-### **Základní syntaxe funkce**
+## **Základní syntaxe funkce**
+
 ```js
 function jmenoFunkce(param1, param2) {
     // Tělo funkce
@@ -768,9 +885,11 @@ function jmenoFunkce(param1, param2) {
 ---
 
 ## Jak se volá funkce?
+
 Funkci zavoláme jejím názvem a předáme jí parametry.
 
-### **Příklad volání funkce**
+## **Příklad volání funkce**
+
 ```js
 function secti(a, b) {
     return a + b;
@@ -784,9 +903,11 @@ console.log(vysledek); // Výstup: 8
 ---
 
 ## Co jsou vstupní parametry?
+
 Parametry jsou **proměnné**, které funkce přijímá jako vstup.
 
-### **Příklad s parametry**
+## **Příklad s parametry**
+
 ```js
 function pozdrav(jmeno) {
     console.log("Ahoj, " + jmeno + "!");
@@ -800,7 +921,9 @@ pozdrav("Pavel"); // Výstup: Ahoj, Pavel!
 
 ## Co je návratový datový typ?
 
-### **Funkce s návratovou hodnotou**
+
+## **Funkce s návratovou hodnotou**
+
 Funkce může **vracet hodnotu** pomocí `return`.
 
 ```js
@@ -813,7 +936,8 @@ console.log(obvod); // Výstup: 30
 ```
 **Funkce `obvodObdelniku` vrátí výsledek výpočtu, který uložíme do proměnné `obvod`.**
 
-### **Funkce bez návratového typu (void funkce)**
+## **Funkce bez návratového typu (void funkce)**
+
 Pokud funkce nepoužívá `return`, pouze něco vykoná, ale nevrací hodnotu.
 
 ```js
@@ -828,20 +952,12 @@ zobrazZpravu(); // Výstup: Toto je zpráva!
 ---
 
 ## Shrnutí
+
 **Funkce** je blok kódu, který můžeme volat kdykoli.  
 **Vstupní parametry** předávají hodnoty funkci.  
 **Návratový typ** určuje, co funkce vrací (`return`).  
 **Funkce bez return** (void) nic nevrací, pouze vykoná akci.  
 
-## JavaScript – události
-Události reagují na interakci uživatele, například kliknutí.
-
-### Příklad:
-```html
-<button onclick="alert('Kliknuto!')">Klikni mě</button>
-```
-
----
 
 
 
