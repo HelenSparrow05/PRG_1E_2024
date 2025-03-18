@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+h1, p {
+    border: 2px dashed red;
+    margin: 1.5rem 20%;
+    padding: 2%;
+    
+}
+div{
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+}
+div:hover{
+    background-color: blue;
+}
+
+
