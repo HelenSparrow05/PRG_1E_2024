@@ -1,0 +1,3 @@
+function pozdrav(){
+    alert("ahoj")
+}
