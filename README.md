@@ -49,6 +49,7 @@
   - [JavaScript – práce se stringy](#javascript--práce-se-stringy)
   - [JavaScript – pole](#javascript--pole)
   - [JavaScript – funkce](#javascript--funkce)
+  - [JavaScript - DOM](#co-je-dom)
 
 
 
@@ -957,6 +958,156 @@ zobrazZpravu(); // Výstup: Toto je zpráva!
 **Vstupní parametry** předávají hodnoty funkci.  
 **Návratový typ** určuje, co funkce vrací (`return`).  
 **Funkce bez return** (void) nic nevrací, pouze vykoná akci.  
+
+# Co je DOM?
+
+**DOM (Document Object Model)** je objektová reprezentace HTML dokumentu. Když se webová stránka načte, prohlížeč ji převede do podoby stromové struktury, kde každý HTML prvek (například `<div>`, `<p>`, `<h1>`) se stává uzlem (node), se kterým může JavaScript pracovat.
+
+Díky DOM může JavaScript:
+
+- vybírat jednotlivé prvky na stránce,
+- měnit jejich obsah a vzhled,
+- přidávat nové prvky,
+- reagovat na události (např. kliknutí).
+
+---
+
+## Výběr HTML prvků
+
+Výběr prvků je základní krok při práci s DOM. Existuje několik způsobů, jak najít konkrétní prvek na stránce.
+
+### 1. `document.getElementById("id")`
+
+Vrátí jeden konkrétní HTML prvek podle jeho atributu `id`. Tento způsob je velmi rychlý a efektivní.
+
+```html
+<p id="odstavec">Ahoj!</p>
+```
+
+```js
+const prvek = document.getElementById("odstavec");
+```
+
+### 2. `document.getElementsByTagName("tag")`
+
+Vrátí **kolekci** všech HTML prvků se zadaným názvem značky (`tag`). Například všechny odstavce `<p>`.
+
+```js
+const vsechnyOdstavce = document.getElementsByTagName("p");
+```
+
+### 3. `document.getElementsByClassName("trida")`
+
+Vrátí **kolekci** všech prvků, které mají danou CSS třídu.
+
+```js
+const cervenePrvky = document.getElementsByClassName("cervena");
+```
+
+### 4. `document.querySelector("selektor")`
+
+Vrátí **první prvek**, který odpovídá zadanému CSS selektoru (např. `.trida`, `#id`, `div > p`).
+
+```js
+const tlacitko = document.querySelector(".btn");
+```
+
+### 5. `document.querySelectorAll("selektor")`
+
+Vrátí **všechny prvky**, které odpovídají CSS selektoru, ve formě NodeListu (podobné poli).
+
+```js
+const vsechnaTlacitka = document.querySelectorAll("button");
+```
+
+---
+
+## Přidání nového HTML prvku
+
+Pomocí JavaScriptu můžeme dynamicky vytvořit a vložit nový HTML prvek na stránku.
+
+```js
+const novyElement = document.createElement("div"); // vytvoříme nový <div>
+novyElement.textContent = "Toto je nový prvek";
+document.body.appendChild(novyElement); // vložíme ho na konec <body>
+```
+
+---
+
+## Odstranění prvku
+
+Chceme-li nějaký prvek odstranit ze stránky, použijeme metodu `.remove()`:
+
+```js
+const odstranit = document.getElementById("reklama");
+odstranit.remove();
+```
+
+---
+
+## Užitečné vlastnosti a metody
+
+### `element.innerHTML`
+
+Získá nebo nastaví **HTML obsah** uvnitř prvku (může obsahovat i značky).
+
+```js
+element.innerHTML = "<strong>Tučný text</strong>";
+```
+
+### `element.textContent`
+
+Získá nebo nastaví **čistý text** bez HTML značek.
+
+```js
+element.textContent = "Čistý text";
+```
+
+### `element.classList.add("trida")`
+
+Přidá CSS třídu k elementu.
+
+```js
+element.classList.add("aktivni");
+```
+
+### `element.classList.remove("trida")`
+
+Odebere CSS třídu z elementu.
+
+```js
+element.classList.remove("aktivni");
+```
+
+---
+
+## Ukázkový příklad
+
+```html
+<p id="text">Původní text</p>
+<button onclick="zmenText()">Změň text</button>
+
+<script>
+  function zmenText() {
+    const odstavec = document.getElementById("text");
+    odstavec.textContent = "Text byl úspěšně změněn!";
+  }
+</script>
+```
+
+Tento jednoduchý příklad ukazuje, jak po kliknutí na tlačítko změníme obsah odstavce.
+
+---
+
+## Shrnutí
+
+| Metoda | Popis |
+|--------|-------|
+| `getElementById(id)` | Vrátí prvek podle ID |
+| `getElementsByTagName(tag)` | Vrátí všechny prvky podle značky |
+| `getElementsByClassName(trida)` | Vrátí všechny prvky se zadanou třídou |
+| `querySelector(selektor)` | Vrátí první prvek podle CSS selektoru |
+| `querySelectorAll(selektor)` | Vrátí všechny prvky podle CSS selektoru |
 
 
 
